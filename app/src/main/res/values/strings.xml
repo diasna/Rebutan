@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rebutan</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_filter">Filter</string>
+    <string name="feedback">Feedback</string>
+    <string name="about_team">Copyright © 2014. Melvitech\n<a href="http://www.melvitech.com">www.melvitech.com</a></string>
+</resources>

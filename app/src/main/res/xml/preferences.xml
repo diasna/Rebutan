@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory 
+		android:title="Background Updates"
+		android:key="first_category">
+		
+		<CheckBoxPreference 
+			android:key="perform_updates"
+			android:summary="Enable or disable background data sync"
+			android:title="Enable updates" 
+			android:defaultValue="true"
+		/>
+		
+		<ListPreference 
+			android:key="updates_interval"
+			android:title="Updates interval"
+			android:summary="Define how often updates will be performed"
+			android:defaultValue="1"
+			android:entries="@array/updateInterval"
+			android:entryValues="@array/updateIntervalValues"
+			android:dependency="perform_updates"
+		/>	
+			
+	</PreferenceCategory>
+
+</PreferenceScreen>

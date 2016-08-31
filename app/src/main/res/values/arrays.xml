@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<string-array name="updateInterval">
+		<item name="1">Every 1 Hour</item>
+        <item name="3">Every 3 Hour</item>
+        <item name="6">Every 6 hour</item>
+	</string-array>
+
+	<string-array name="updateIntervalValues">
+        <item name="1">1</item>
+        <item name="3">3</item>
+        <item name="6">6</item>
+	</string-array>
+
+</resources>

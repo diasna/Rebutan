@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.melvitech.rebutan">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Apptheme" >
+        <activity
+            android:name=".MainFragmentActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".preferences.QuickPrefsActivity"/>
+        <activity android:name=".AboutUs"
+            android:parentActivityName=".MainFragmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainFragmentActivity" />
+        </activity>
+        <service android:name=".sync.SchedulerService"/>
+        <receiver android:name=".sync.NotifBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.melvitech.rebutan.Alarm"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
